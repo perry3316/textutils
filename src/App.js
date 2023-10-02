@@ -29,19 +29,6 @@ const [loginValue, setloginValue] = useState(loginInValues);
     function onChange(value) {
         console.log("Captcha value:", value);
     }
-
-    const errorNotify = (message) => {
-        toast.error(message, {
-            position: "top-right",
-            autoClose: 5000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-        });
-    }
-
     const successNotify = (message) => {
         toast.success(message, {
             position: "top-right",
@@ -65,6 +52,18 @@ const [loginValue, setloginValue] = useState(loginInValues);
         } else {
             successNotify('Login Successfully');
         }
+    }
+
+        const errorNotify = (message) => {
+        toast.error(message, {
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+        });
     }
 
   return (
